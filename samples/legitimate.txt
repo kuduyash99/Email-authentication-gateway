@@ -1,0 +1,12 @@
+Return-Path: <alice@example.com>
+Received: from mail.example.com (mail.example.com [203.0.113.10])
+	by mx.receiver.test with ESMTPS; Tue, 24 Nov 2026 10:00:00 +0000
+Authentication-Results: mx.receiver.test;
+	spf=pass (receiver: 203.0.113.10 is authorized) smtp.mailfrom=alice@example.com;
+	dkim=pass header.d=example.com header.s=mail2026;
+	dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=example.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=mail2026;
+	h=from:to:subject:date; bh=abc=; b=def=
+From: Alice <alice@example.com>
+To: bob@receiver.test
+Subject: Hello

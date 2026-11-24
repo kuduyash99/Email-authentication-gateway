@@ -1,0 +1,8 @@
+Return-Path: <attacker@evil.test>
+Authentication-Results: mx.receiver.test;
+	spf=pass smtp.mailfrom=attacker@evil.test;
+	dkim=none;
+	dmarc=fail (p=REJECT sp=REJECT dis=REJECT) header.from=example.com
+From: "Alice" <alice@example.com>
+To: bob@receiver.test
+Subject: Urgent: verify your account
